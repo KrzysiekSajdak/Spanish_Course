@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spanish_course/Models/single_word.dart';
+import 'package:spanish_course/Models/sentence_or_word.dart';
 import 'package:spanish_course/Widgets/words_list.dart';
 
 class Months extends StatelessWidget {
@@ -9,19 +9,19 @@ class Months extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<SingleWord> months = [
-      SingleWord(englishWord: "January", spanishWord: "Enero"),
-      SingleWord(englishWord: "February", spanishWord: "Febrero"),
-      SingleWord(englishWord: "March", spanishWord: "Marzo"),
-      SingleWord(englishWord: "April", spanishWord: "Abril"),
-      SingleWord(englishWord: "May", spanishWord: "Mayo"),
-      SingleWord(englishWord: "June", spanishWord: "Junio"),
-      SingleWord(englishWord: "July", spanishWord: "Julio"),
-      SingleWord(englishWord: "August", spanishWord: "Agosto"),
-      SingleWord(englishWord: "September", spanishWord: "Septiembre"),
-      SingleWord(englishWord: "October", spanishWord: "Octubre"),
-      SingleWord(englishWord: "November", spanishWord: "Noviembre"),
-      SingleWord(englishWord: "December", spanishWord: "Diciembre")
+    final List<SentenceOrWord> months = [
+      SentenceOrWord(englishWord: "January", spanishWord: "Enero"),
+      SentenceOrWord(englishWord: "February", spanishWord: "Febrero"),
+      SentenceOrWord(englishWord: "March", spanishWord: "Marzo"),
+      SentenceOrWord(englishWord: "April", spanishWord: "Abril"),
+      SentenceOrWord(englishWord: "May", spanishWord: "Mayo"),
+      SentenceOrWord(englishWord: "June", spanishWord: "Junio"),
+      SentenceOrWord(englishWord: "July", spanishWord: "Julio"),
+      SentenceOrWord(englishWord: "August", spanishWord: "Agosto"),
+      SentenceOrWord(englishWord: "September", spanishWord: "Septiembre"),
+      SentenceOrWord(englishWord: "October", spanishWord: "Octubre"),
+      SentenceOrWord(englishWord: "November", spanishWord: "Noviembre"),
+      SentenceOrWord(englishWord: "December", spanishWord: "Diciembre")
     ];
 
     return Scaffold(

@@ -1,39 +1,40 @@
 import 'package:flutter/material.dart';
-import 'package:spanish_course/Models/single_word.dart';
+import 'package:spanish_course/Models/sentence_or_word.dart';
 import 'package:spanish_course/Widgets/words_list.dart';
 
 class Numbers extends StatelessWidget {
-  const Numbers({Key? key}) : super(key: key);
+  const Numbers({Key? key, required this.label}) : super(key: key);
 
+  final String label;
   @override
   Widget build(BuildContext context) {
 
-    final List<SingleWord> numbers = [
-      SingleWord(englishWord: "Zero", spanishWord: "Cero"),
-      SingleWord(englishWord: "One", spanishWord: "Uno"),
-      SingleWord(englishWord: "Two", spanishWord: "Dos"),
-      SingleWord(englishWord: "Three", spanishWord: "Tres"),
-      SingleWord(englishWord: "Four", spanishWord: "Cuatro"),
-      SingleWord(englishWord: "Five", spanishWord: "Cinco"),
-      SingleWord(englishWord: "Six", spanishWord: "Seis"),
-      SingleWord(englishWord: "Seven", spanishWord: "Siete"),
-      SingleWord(englishWord: "Eight", spanishWord: "Ocho"),
-      SingleWord(englishWord: "Nine", spanishWord: "Nueve"),
-      SingleWord(englishWord: "Ten", spanishWord: "Diez"),
-      SingleWord(englishWord: "Eleven", spanishWord: "Once"),
-      SingleWord(englishWord: "Twelve", spanishWord: "Doce"),
-      SingleWord(englishWord: "Thirteen", spanishWord: "Trece"),
-      SingleWord(englishWord: "Fourteen", spanishWord: "Catorce"),
-      SingleWord(englishWord: "Fifteen", spanishWord: "Quince"),
-      SingleWord(englishWord: "Sixteen", spanishWord: "Dieciseis"),
-      SingleWord(englishWord: "Seventeen", spanishWord: "Diecisiete"),
-      SingleWord(englishWord: "Eighteen", spanishWord: "Dieciocho"),
-      SingleWord(englishWord: "Nineteen", spanishWord: "Diecinueve"),
-      SingleWord(englishWord: "Twenty", spanishWord: "Veinte")
+    final List<SentenceOrWord> numbers = [
+      SentenceOrWord(englishWord: "Zero", spanishWord: "Cero"),
+      SentenceOrWord(englishWord: "One", spanishWord: "Uno"),
+      SentenceOrWord(englishWord: "Two", spanishWord: "Dos"),
+      SentenceOrWord(englishWord: "Three", spanishWord: "Tres"),
+      SentenceOrWord(englishWord: "Four", spanishWord: "Cuatro"),
+      SentenceOrWord(englishWord: "Five", spanishWord: "Cinco"),
+      SentenceOrWord(englishWord: "Six", spanishWord: "Seis"),
+      SentenceOrWord(englishWord: "Seven", spanishWord: "Siete"),
+      SentenceOrWord(englishWord: "Eight", spanishWord: "Ocho"),
+      SentenceOrWord(englishWord: "Nine", spanishWord: "Nueve"),
+      SentenceOrWord(englishWord: "Ten", spanishWord: "Diez"),
+      SentenceOrWord(englishWord: "Eleven", spanishWord: "Once"),
+      SentenceOrWord(englishWord: "Twelve", spanishWord: "Doce"),
+      SentenceOrWord(englishWord: "Thirteen", spanishWord: "Trece"),
+      SentenceOrWord(englishWord: "Fourteen", spanishWord: "Catorce"),
+      SentenceOrWord(englishWord: "Fifteen", spanishWord: "Quince"),
+      SentenceOrWord(englishWord: "Sixteen", spanishWord: "Dieciseis"),
+      SentenceOrWord(englishWord: "Seventeen", spanishWord: "Diecisiete"),
+      SentenceOrWord(englishWord: "Eighteen", spanishWord: "Dieciocho"),
+      SentenceOrWord(englishWord: "Nineteen", spanishWord: "Diecinueve"),
+      SentenceOrWord(englishWord: "Twenty", spanishWord: "Veinte")
     ];
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Numbers'),),
+      appBar: AppBar(title: Text(label),),
       body: WordsList(data: numbers),
     );
   }
